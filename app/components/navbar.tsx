@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link";
 import React, { useState, FC, useEffect } from "react";
-import { FaMoon } from "react-icons/fa";
-import { MdSunny, MdMenu, MdOutlineClose } from "react-icons/md";
+import { FaRocket } from "react-icons/fa";
+import { MdMenu, MdOutlineClose } from "react-icons/md";
 import { useTheme } from 'next-themes'
 
 interface LinkItem {
@@ -14,26 +14,19 @@ const Navbar: FC = () => {
     const [nav, setNav] = useState(false);
     const { theme, setTheme } = useTheme()
     const links: LinkItem[] = [
+        
         {
             id: 1,
-            link: "home",
+            link: "about",
         },
         {
             id: 2,
-            link: "about",
+            link: "experience",
         },
         {
             id: 3,
             link: "portfolio",
-        },
-        {
-            id: 4,
-            link: "experience",
-        },
-        {
-            id: 5,
-            link: "contact",
-        },
+        }
     ];
 
     // Function to hide nav on resize
@@ -55,12 +48,8 @@ const Navbar: FC = () => {
 
     return (
         <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed nav">
-            <button
-                className="hover:bg-gray-300 dark:hover:bg-gray-600 font-bold p-3 rounded-full"
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-                    {theme === 'dark' ? <MdSunny size={24} className="text-white" /> : <FaMoon size={24} className="text-gray-700" />}
-                
-            </button>
+
+            <FaRocket size={24} className="text-gray-700" />
 
             <ul className="hidden md:flex">
                 {links.map(({ id, link }) => (
@@ -68,14 +57,14 @@ const Navbar: FC = () => {
                         key={id}
                         className="nav-links px-4 cursor-pointer capitalize font-light text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
                     >
-                        <Link href={link}>{link}</Link>
+                        {link}
                     </li>
                 ))}
             </ul>
 
             <button
                 onClick={() => setNav(!nav)}
-                className="dark:hover:bg-gray-600 text-white font-bold p-3 rounded-full md:hidden"
+                className="hover:bg-gray-600 text-white font-bold p-3 rounded-full md:hidden"
             >
                 {nav ? <MdOutlineClose size={24} /> : <MdMenu size={24} />}
             </button>
@@ -87,9 +76,7 @@ const Navbar: FC = () => {
                             key={id}
                             className="px-4 cursor-pointer capitalize py-6 text-4xl"
                         >
-                            <Link onClick={() => setNav(!nav)} href={link}>
-                                {link}
-                            </Link>
+                            {link}
                         </li>
                     ))}
                 </ul>

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Particles from "./components/particles";
+import Home from "./pages/home"
 
-export default function Home() {
+export default function Main() {
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -9,7 +9,7 @@ export default function Home() {
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
       />
-    
+      <Home />
     </main>
   );
 }
