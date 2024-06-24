@@ -1,5 +1,6 @@
 import Particles from "./components/particles";
 import Home from "./pages/home"
+import Experience from "./pages/experience"
 
 export default function Main() {
   
@@ -10,6 +11,7 @@ export default function Main() {
         quantity={100}
       />
       <Home />
+      <Experience />
     </main>
   );
 }
