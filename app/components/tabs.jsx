@@ -37,11 +37,11 @@ const Tabs = ({ children }) => {
 
 const Tab = ({ label, children }) => {
     return (
-            <div label={label} className="hidden">
+        <div label={label} className="hidden">
 
-                {children}
+            {children}
 
-            </div>
+        </div>
     );
 };
 export { Tabs, Tab };

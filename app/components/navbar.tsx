@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useState, FC, useEffect } from "react";
 import { FaRocket } from "react-icons/fa";
 import { MdMenu, MdOutlineClose } from "react-icons/md";
-import { useTheme } from 'next-themes'
 
 interface LinkItem {
     id: number;
@@ -12,7 +11,6 @@ interface LinkItem {
 
 const Navbar: FC = () => {
     const [nav, setNav] = useState(false);
-    const { theme, setTheme } = useTheme()
     const links: LinkItem[] = [
         
         {

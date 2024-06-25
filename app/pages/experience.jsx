@@ -1,79 +1,41 @@
-import React from 'react';
-import { Tabs, Tab } from '../components/tabs';
+import React from 'react'
+import { Tabs, Tab } from '../components/tabs'
+import { jobs } from '../../util/constants'
+
 
 const Experience = () => {
-  return (
-    <div>
-      <Tabs>
-        <Tab label="Solvo Global">
-          
-          <div className="py-4 border rounded-xl border-zinc-600">
-            <h2 className="text-lg font-medium mb-2">Solvo Global</h2>
-            <p className="text-gray-100">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
-              quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
-              harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
-              Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
-              earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
-              aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
-              aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
-              molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-              recusandae alias error harum maxime adipisci amet laborum.
-            </p>
-          </div>
-          
-        </Tab>
-        <Tab label="Kin + Carta">
-          <div className="py-4 border rounded-xl border-zinc-600">
-            <h2 className="text-lg font-medium mb-2">Kin + Carta</h2>
-            <p className="text-gray-100">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
-              quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
-              harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
-              Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
-              earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
-              aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
-              aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
-              molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-              recusandae alias error harum maxime adipisci amet laborum.
-            </p>
-          </div>
-        </Tab>
-        <Tab label="Santander Tecnologia">
-          <div className="py-4 border rounded-xl border-zinc-600">
-            <h2 className="text-lg font-medium mb-2">Santander Tecnologia</h2>
-            <p className="text-gray-100">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
-              quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
-              harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
-              Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
-              earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
-              aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
-              aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
-              molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-              recusandae alias error harum maxime adipisci amet laborum.
-            </p>
-          </div>
-        </Tab>
-        <Tab label="Accenture">
-          <div className="py-4 border rounded-xl border-zinc-600">
-            <h2 className="text-lg font-medium mb-2">Accenture</h2>
-            <p className="text-gray-100">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
-              quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
-              harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
-              Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
-              earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
-              aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
-              aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
-              molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-              recusandae alias error harum maxime adipisci amet laborum.
-            </p>
-          </div>
-        </Tab>
-      </Tabs>
-    </div>
-  );
+    return (
+        <section>
+            <h2 className='border-b-2 border-purple-300'>Where I've worked </h2>
+            <Tabs>
+                {jobs.map(job => (
+                    <Tab label={job.company}>
+                        <div className="py-4 border rounded-xl border-zinc-600 text-justify">
+                            <h2 className="text-lg font-medium mb-2">
+                                {job.title}
+                                <a
+                                    href={job.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    {job.company}
+                                </a>
+                            </h2>
+                            <p className="text-gray-100">{job.date}</p>
+                            <ul>
+                                {job.experience.map(exp => (
+                                    <li className="text-gray-100">
+                                        {exp}
+                                    </li>
+
+                                ))}
+                            </ul>
+
+                        </div>
+                    </Tab>
+                ))}
+            </Tabs>
+        </section>
+    );
 };
 
 export default Experience;
