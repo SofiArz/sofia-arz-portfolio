@@ -23,7 +23,7 @@ export const jobs = [
             "Developed Rest APIS written in C# using .Net Core 5 framework.",
             "Developed a feature to save documents in Azure Blob Storage.",
             "Worked with Azure Service Bus queues, topics, and subscriptions.",
-            "Delivered 6+ Azure Functions.",
+            "Delivered more than 6 Azure Functions.",
             "Created and designed the unit test for every API and azure function I worked on.",
             "Troubleshooted code related-issues and defects.",
             "Worked with the Scrum framework as agile methodology. I demoed every 2 weeks the new features I worked on to the client."

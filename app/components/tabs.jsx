@@ -10,8 +10,8 @@ const Tabs = ({ children }) => {
     };
 
     return (
-        <div className="container flex mx-auto">
-            <div className="flex border-l border-gray-300 min-w-64 grid gap-y-16 py-4">
+        <div className="container md:flex mx-auto">
+            <div className="lg:grid border-l border-gray-300 min-w-64 gap-y-16 py-4 hidden">
                 {children.map(child => (
                     <button
                         key={child.props.label}
@@ -25,10 +25,9 @@ const Tabs = ({ children }) => {
             </div>
             <div className="py-4">
                 {children.map(child => {
-                    if (child.props.label === activeTab) {
-                        return <div key={child.props.label}>{child.props.children}</div>;
-                    }
-                    return null;
+
+                    return <div className={child.props.label !== activeTab ? "lg:hidden my-8" : ""} key={child.props.label}>{child.props.children}</div>;
+
                 })}
             </div>
         </div>

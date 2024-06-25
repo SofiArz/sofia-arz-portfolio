@@ -11,7 +11,7 @@ const Experience = () => {
             <Tabs>
                 {jobs.map(job => (
                     <Tab label={job.company}>
-                        <div className="p-10 border rounded-xl border-zinc-600 text-justify">
+                        <div className="p-4 md:p-16 border rounded-xl border-zinc-600 text-justify lg:min-h-[500px] 2xl:min-w-[1150px]">
                             <a
                                 href={job.link}
                                 target="_blank"
@@ -27,10 +27,10 @@ const Experience = () => {
                                 <SlCalender className='text-purple-300 mr-2.5' />
                                 {job.date}
                             </p>
-                            <ul className='grid gap-4'>
+                            <ul className='grid gap-4 2xl:min-w-[1150px]'>
                                 {job.experience.map(exp => (
                                     <li className="text-gray-100 text-sm">
-                                        <strong className='text-purple-300 mr-1 animate-pulse'>✦</strong>
+                                        <strong className='text-purple-300 mr-2.5 animate-pulse'>✦</strong>
                                         {exp}
                                     </li>
 

@@ -15,6 +15,10 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+main {
+  gap: 10rem
+}
+
 h1 {
   font-size: 3rem;
   color: #d1b8d5;
@@ -32,7 +36,7 @@ p {
   color: whitesmoke;
 }
 
-a{
+a {
   color: theme('colors.purple.500');
 }
 
@@ -51,7 +55,7 @@ a{
   gap: 1.5rem;
   justify-content: start;
   text-align: left;
- 
+
 
 }
 
