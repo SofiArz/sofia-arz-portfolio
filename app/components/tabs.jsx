@@ -11,7 +11,7 @@ const Tabs = ({ children }) => {
 
     return (
         <div className="container flex mx-auto">
-            <div className="flex border-l border-gray-300 min-w-64 grid gap-y-3">
+            <div className="flex border-l border-gray-300 min-w-64 grid gap-y-16 py-4">
                 {children.map(child => (
                     <button
                         key={child.props.label}
