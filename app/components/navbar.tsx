@@ -45,7 +45,7 @@ const Navbar: FC = () => {
     }, []);
 
     return (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed nav">
+        <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed nav hidden">
 
             <FaRocket size={24} className="text-gray-700" />
 
