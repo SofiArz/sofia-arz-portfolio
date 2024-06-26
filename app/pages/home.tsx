@@ -8,9 +8,9 @@ const Home: FC = () => {
         <section>
             <div className="container lg:flex">
                 <div className="title-container mb-28">
-                    <p><strong> Hi! My name is </strong></p>
+                    <p><strong className="text-cyan-200"> Hi! My name is </strong></p>
                     <h1>Sofia Arzamendia</h1>
-                    <p>I am a software developer based in Italy that loves using
+                    <p className="text-gray-200">I am a software developer based in Italy that loves using
                         .Net + Reactjs to create amazing things.</p>
                 </div>
                 <img
