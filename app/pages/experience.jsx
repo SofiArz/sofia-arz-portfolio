@@ -6,7 +6,7 @@ import { jobs } from '../../util/constants'
 
 const Experience = () => {
     return (
-        <section>
+        <section className='lg:px-24 w-full'>
             <h2 className='border-b-2 border-purple-300 mb-20'>Where I've worked </h2>
             <Tabs>
                 {jobs.map(job => (

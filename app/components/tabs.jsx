@@ -9,7 +9,7 @@ const Tabs = ({ children: tabs }) => {
     };
 
     return (
-        <div className="container contents mx-auto">
+        <div className="container px-9">
             <div className="lg:flex border-b  border-zinc-600 min-w-64 gap-16 hidden mb-4 ">
                 {tabs.map((tab, index) => (
                     <button
