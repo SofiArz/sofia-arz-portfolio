@@ -1,33 +1,31 @@
 'use client'
 import React, { useState } from 'react'
 
-const Tabs = ({ children }) => {
-    const [activeTab, setActiveTab] = useState(children[0].props.label);
+const Tabs = ({ children: tabs }) => {
+    const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
-    const handleClick = (e, newActiveTab) => {
-        e.preventDefault();
-        setActiveTab(newActiveTab);
+    const handleTabClick = (index) => {
+        setSelectedTabIndex(index);
     };
 
     return (
-        <div className="container md:flex mx-auto">
-            <div className="lg:grid border-l border-gray-300 min-w-64 gap-y-16 py-4 hidden">
-                {children.map(child => (
+        <div className="container contents mx-auto">
+            <div className="lg:flex border-b  border-zinc-600 min-w-64 gap-16 hidden mb-4 ">
+                {tabs.map((tab, index) => (
                     <button
-                        key={child.props.label}
-                        className={`${activeTab === child.props.label ? 'border-l-4 border-purple-500' : ''
-                            } flex-1 text-gray-300 font-medium py-2`}
-                        onClick={e => handleClick(e, child.props.label)}
+                        key={tab.props.label}
+                        className={`${index === selectedTabIndex ? 'border-b-4 border-purple-500 text-white scale-105' : ''
+                            } flex-1 text-gray-300 font-light py-2 hover:scale-105 hover:text-white hover:duration-200`}
+                        onClick={() => handleTabClick(index)}
                     >
-                        {child.props.label}
+                        {tab.props.label}
                     </button>
                 ))}
             </div>
+
             <div className="py-4">
-                {children.map(child => {
-
-                    return <div className={child.props.label !== activeTab ? "lg:hidden my-8" : ""} key={child.props.label}>{child.props.children}</div>;
-
+                {tabs.map((tab, index) => {
+                    return <div className={index !== selectedTabIndex ? "lg:hidden my-8" : ""} key={tab.props.label}>{tab.props.children}</div>;
                 })}
             </div>
         </div>
