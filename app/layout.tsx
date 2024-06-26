@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { jetBrainsMonoFont } from '../public/fonts';
 import Navbar from "./components/navbar";
-import Footer from "./pages/footer"
+import Footer from "./components/footer"
 import "./globals.css";
 
 export const metadata: Metadata = {
