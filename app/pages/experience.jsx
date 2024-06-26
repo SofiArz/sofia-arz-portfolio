@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tabs, Tab } from '../components/tabs'
-import { SlCalender } from "react-icons/sl";
+import { FaCalendarAlt, FaExternalLinkAlt } from "react-icons/fa";
 import { jobs } from '../../util/constants'
 
 
@@ -16,15 +16,16 @@ const Experience = () => {
                                 href={job.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-xl">
+                                className="text-xl flex">
                                 {job.company}
+                                <FaExternalLinkAlt className='text-base ml-2.5 mt-[6px]' />
                             </a>
                             <h2 className="text-lg mb-2">
                                 {job.title + " "}
                             </h2>
 
                             <p className="flex text-base text-gray-400 mb-4">
-                                <SlCalender className='text-purple-300 mr-2.5' />
+                                <FaCalendarAlt className='text-purple-300 mr-2.5' />
                                 {job.date}
                             </p>
                             <ul className='grid gap-4 max-w-[1024px]'>

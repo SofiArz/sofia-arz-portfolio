@@ -39,8 +39,15 @@ a {
   color: theme('colors.cyan.400');
 }
 
-a:hover{
+a:hover {
   color: theme('colors.cyan.300');
+
+  svg {
+    margin-top: 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
 }
 
 .container {
