@@ -7,7 +7,7 @@ const Home: FC = () => {
     return (
         <section>
             <div className="container lg:flex">
-                <div className="title-container mb-28">
+                <div className="title-container mb-10 mt-10 md:mb-20 md:mt-0 items-center justify-center text-center md:items-start md:justify-start md:text-left">
                     <p><strong className="text-cyan-200"> Hi! My name is </strong></p>
                     <h1>Sofia Arzamendia</h1>
                     <p className="text-gray-200">I am a software developer based in Italy that loves using

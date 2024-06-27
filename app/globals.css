@@ -16,7 +16,10 @@ body {
 }
 
 main {
-  gap: 10rem
+  gap: 4rem;
+  @media (min-width: 640px) { 
+    gap: 8rem;
+   }
 }
 
 h1 {
@@ -59,12 +62,9 @@ a:hover {
 
 .title-container {
   position: relative;
-  align-items: start;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  justify-content: start;
-  text-align: left;
 }
 
 .resume-btn {
@@ -116,7 +116,7 @@ a:hover {
 }
 
 img {
-  height: 340px;
+  height: 289px;
   width: 363px;
   border-radius: 26%;
   filter: grayscale(3);

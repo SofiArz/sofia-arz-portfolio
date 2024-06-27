@@ -3,7 +3,7 @@ import Card from '../components/card'
 
 const Portfolio = () => {
     return (
-        <section className='lg:px-24 w-full'>
+        <section className='lg:px-24 w-full mb-10 md:mb-0'>
             <h2 className='border-b-2 border-purple-300 mb-20'>Things I've built</h2>
             <div className='flex flex-wrap gap-16 max-w-[1163px] m-auto'>
                 <Card
