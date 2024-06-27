@@ -21,7 +21,10 @@ const Footer = () => {
                 <div className="flex justify-between sm:w-[300px] pt-4 text-2xl">
                     {items.map((x, index) => {
                         return (
-                            <a href={x.link} target="_blank"
+                            <a
+                                key={x.name}
+                                href={x.link}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-500">
                                 <x.icon key={index} className="hover:text-white" />

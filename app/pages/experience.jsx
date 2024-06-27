@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tabs, Tab } from '../components/tabs'
-import { FaCalendarAlt, FaExternalLinkAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaExternalLinkAlt } from 'react-icons/fa'
 import { jobs } from '../../util/constants'
 
 
@@ -10,7 +10,7 @@ const Experience = () => {
             <h2 className='border-b-2 border-purple-300 mb-20'>Where I've worked </h2>
             <Tabs>
                 {jobs.map(job => (
-                    <Tab label={job.company}>
+                    <Tab key={job.company} label={job.company}>
                         <div className="p-4 md:p-16 border rounded-xl border-zinc-600 text-justify lg:min-h-[500px]">
                             <a
                                 href={job.link}
@@ -29,8 +29,8 @@ const Experience = () => {
                                 {job.date}
                             </p>
                             <ul className='grid gap-4 max-w-[1024px]'>
-                                {job.experience.map(exp => (
-                                    <li className="text-gray-100 text-sm">
+                                {job.experience.map((exp, index) => (
+                                    <li key={job.company + index} className="text-gray-100 text-sm">
                                         <strong className='text-purple-300 mr-2.5 animate-pulse'>✦</strong>
                                         {exp}
                                     </li>
