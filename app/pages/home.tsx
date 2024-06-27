@@ -12,12 +12,18 @@ const Home: FC = () => {
                     <h1>Sofia Arzamendia</h1>
                     <p className="text-gray-200">I am a software developer based in Italy that loves using
                         .Net + Reactjs to create amazing things.</p>
+                    <a
+                        className="resume-btn"
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Resume
+                    </a>
                 </div>
                 <img
                     alt="sofi-profile-pic"
                     src="./sofi-profile-pic.jpg"
                     className="lg:ml-28 m-auto" />
-
             </div>
         </section>
     );

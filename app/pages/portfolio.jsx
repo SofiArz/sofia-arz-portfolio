@@ -30,7 +30,7 @@ const Portfolio = () => {
                     title='Azure file rename API'
                     githubLink='https://github.com/SofiArz/azure-file-blob-managment'
                 >
-                    <p className='text-base h-[144px]'>An api that receives two parameters, the old name of a file and the new name to update it.
+                    <p className='text-base md:h-[144px]'>An api that receives two parameters, the old name of a file and the new name to update it.
                         It connects with azure blob storage.
                     </p>
                 </Card>
@@ -39,7 +39,7 @@ const Portfolio = () => {
                     title='Pet shelter'
                     githubLink='https://github.com/SofiArz/VolunteerPetShelter'
                 >
-                    <p className='text-base text-base h-[144px]'>
+                    <p className='text-base text-base md:h-[144px]'>
                         A web application for adopting pets and applying to volunteer at shelters. This project was part of my final year at university and was built using C#, jQuery, JavaScript, Entity Framework, and SQL.
                     </p>
                 </Card>
