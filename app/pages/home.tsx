@@ -6,7 +6,7 @@ const Home: FC = () => {
 
     return (
         <section>
-            <div className="container lg:flex">
+            <div className="container lg:flex viewport-fill">
                 <div className="title-container mb-10 mt-10 md:mb-20 md:mt-0 items-center justify-center text-center md:items-start md:justify-start md:text-left">
                     <p><strong className="text-cyan-200"> Hi! My name is </strong></p>
                     <h1>Sofia Arzamendia</h1>

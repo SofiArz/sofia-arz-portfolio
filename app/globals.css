@@ -17,9 +17,16 @@ body {
 
 main {
   gap: 4rem;
-  @media (min-width: 640px) { 
+
+  @media (min-width: 640px) {
     gap: 8rem;
-   }
+  }
+}
+
+.viewport-fill {
+  @media (min-width: 640px) {
+    height: 100vh;
+  }
 }
 
 h1 {
