@@ -9,7 +9,7 @@ import {
 const items = [
     { name: "Linkedin", icon: FaLinkedin, link: "https://www.linkedin.com/in/sofia-arzamendia/" },
     { name: "Github", icon: FaGithub, link: "https://github.com/SofiArz" },
-    { name: "Whatsapp", icon: FaWhatsapp, link: "https://wa.me/+393381826957" },
+    { name: "Whatsapp", icon: FaWhatsapp, link: "https://wa.me/+393761858867" },
     { name: "Mail", icon: FaEnvelope, link: "mailto:arzamendia.sofi@gmail.com" }
 ];
 
